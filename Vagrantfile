@@ -6,8 +6,8 @@ Vagrant.configure(2) do |config|
 
   config.vm.provision "ansible" do |ansible|
     ansible.verbose = true
-    ansible.playbook = "provisioning/play-wireguard-vlan.yml"
-    ansible.limit = 'all,localhost'
+    ansible.playbook = "provisioning/vagrant-play.yml"
+    # ansible.limit = 'all,localhost'
     ansible.host_vars = {
       "localhost" => {"ansible_become_pass" => 'vagrant'}
     }

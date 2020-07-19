@@ -2,7 +2,8 @@
 # Deploy a customized aJourney stack to a clustered layout.
 
 - name:           Deploy the Wireguard server for the personal VLAN.
-  hosts:          server
+  hosts:          servers
+  connection:     local
   become:         yes
   become_method:  sudo
 
